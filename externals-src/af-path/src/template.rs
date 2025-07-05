@@ -92,6 +92,10 @@ impl PathTemplate {
             "suffix".to_string(),
             self.suffix.clone().unwrap_or_default(),
         );
+        vars.insert(
+            "serial".to_string(),
+            self.extract_serial(input).unwrap_or_default(),
+        );
 
         let file_name =
             strfmt(&self.file_template, &vars).with_context(|| "Failed to format file name")?;
@@ -247,5 +251,17 @@ mod tests {
 
         let serial = template.extract_serial(Path::new("/this/001/something_Ambix.wav"));
         assert_eq!(serial, None);
+    }
+
+    #[test]
+    fn test_path_template_apply_with_serial() {
+        let mut template = PathTemplate::new(r"{stem}-t{serial}.{extension}");
+        template.stem = Some("processed".to_string());
+
+        let path = template.apply(Path::new("MixPre-003_Ambix.wav")).unwrap();
+        assert_eq!(path, PathBuf::from("processed-t003.wav"));
+
+        let path = template.apply(Path::new("no-serial.wav")).unwrap();
+        assert_eq!(path, PathBuf::from("processed-t.wav"));
     }
 }
