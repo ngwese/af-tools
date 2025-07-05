@@ -1,0 +1,20 @@
+[package]
+name = "af-path"
+version = "0.1.0"
+authors = [ "Greg Wuller <greg@afofo.com>" ]
+edition = "2018"
+
+[lib]
+name = "af_path"
+crate-type = ["cdylib"]
+
+[dependencies]
+median = { git = "https://github.com/Cycling74/median" }
+strfmt = "0.2.4"
+thiserror = "2.0.12"
+anyhow = "1.0.98"
+regex = "1.11.1"
+
+[profile.release]
+lto = true
+panic = "abort"
