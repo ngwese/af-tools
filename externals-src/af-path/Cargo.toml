@@ -3,6 +3,7 @@ name = "af-path"
 version = "0.1.0"
 authors = [ "Greg Wuller <greg@afofo.com>" ]
 edition = "2018"
+license = "MIT"
 
 [lib]
 name = "af_path"
