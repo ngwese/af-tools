@@ -1,0 +1,32 @@
+#get makefile content from github
+extend = "./target/cargo-make/Makefile.toml"
+
+[config]
+load_script = '''
+#!@duckscript
+
+#edit URL here
+# url_base = set https://raw.githubusercontent.com/Cycling74/median/develop/median/utils
+url_base = set https://raw.githubusercontent.com/ngwese/median/refs/heads/fix-install-init-mac/median/utils
+
+# setup directory for external makefiles
+mkdir ./target/cargo-make
+
+files = array Makefile.toml PkgInfo
+
+for file in ${files}
+  file_path = set ./target/cargo-make/${file}
+  if not is_file ${file_path}
+    content = http_client --method GET ${url_base}/${file}
+    writefile ${file_path} ${content}
+  end
+end
+
+'''
+
+[env]
+MAX_EXT_NAME = "af.path.walk"
+MAX_PACKAGE_NAME = "af.tools"
+
+PLATFORM_INSTALL_DIR = { source = "${CARGO_MAKE_RUST_TARGET_OS}", default_value = "ERROR", mapping = {"macos" = "${HOME}/Documents/Max 9/Packages", windows = "${USERPROFILE}/Documents/Max 9/Packages" } }
+
