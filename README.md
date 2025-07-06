@@ -7,3 +7,11 @@ of various tools.
   transforming paths
 * [af.path.walk](af-path-walk/README.md) - alternative filesystem walker which
   honors ignore files
+
+## building
+
+First check/adjust the `PLATFORM_INSTALL_DIR` env in `af-path*/Makefile.toml` to make sure the installation lands in a directory in Max's search path, then:
+
+```sh
+cargo make install
+```
