@@ -10,9 +10,21 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 185.0, 440.0, 1183.0, 780.0 ],
+		"rect" : [ 205.0, 417.0, 1183.0, 780.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-23",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 201.0, 395.0, 134.0, 22.0 ],
+					"text" : "path something-003.aiff"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"attr" : "sub_dir",
 					"id" : "obj-15",
@@ -56,7 +68,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 311.0, 124.0, 622.0, 20.0 ],
-					"text" : "Root:/Users/greg/Music/Nuendo Projects/Untitled/Audio/MixPre-003_Ambix.WAV"
+					"text" : "Root:/Users/greg/Music/Nuendo Projects/Untitled/Audio/MixPre-002_FuMa.WAV"
 				}
 
 			}
@@ -159,9 +171,9 @@
 				"box" : 				{
 					"id" : "obj-2",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "list" ],
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "list" ],
 					"patching_rect" : [ 144.0, 449.0, 292.0, 22.0 ],
 					"text" : "af.path.template @template {stem}{suffix}.{extension}"
 				}
@@ -281,6 +293,14 @@
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-21", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"midpoints" : [ 210.5, 435.0, 153.5, 435.0 ],
+					"source" : [ "obj-23", 0 ]
 				}
 
 			}
