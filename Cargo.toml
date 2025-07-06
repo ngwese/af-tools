@@ -1,0 +1,22 @@
+[workspace]
+resolver = "3"
+members = [
+    "af-path-walk",
+    "af-path-template",
+]
+
+[workspace.dependencies]
+median = { git = "https://github.com/ngwese/median", rev = "f5a8ad5" }
+strfmt = "0.2.4"
+thiserror = "2.0.12"
+anyhow = "1.0.98"
+regex = "1.11.1"
+ignore = "0.4.23"
+
+[workspace.metadata]
+authors = [ "Greg Wuller <greg@afofo.com>" ]
+license = "MIT"
+
+[profile.release]
+lto = true
+panic = "abort"

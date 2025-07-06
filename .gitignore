@@ -1,4 +1,38 @@
+# Rust build artifacts
+target/
+**/*.rs.bk
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
 *~
+
+# OS generated files
 .DS_Store
-externals/
-other/
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary folders
+tmp/
+temp/
+
+# Max/MSP specific
+*.mxo
+*.mxe
+*.mxe64
+*.maxpat
+*.maxhelp
+*.maxproj
+
+# Build outputs
+dist/
+build/
