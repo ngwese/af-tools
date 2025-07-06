@@ -6,7 +6,8 @@ load_script = '''
 #!@duckscript
 
 #edit URL here
-url_base = set https://raw.githubusercontent.com/Cycling74/median/develop/median/utils
+# url_base = set https://raw.githubusercontent.com/Cycling74/median/develop/median/utils
+url_base = set https://raw.githubusercontent.com/ngwese/median/refs/heads/fix-install-init-mac/median/utils
 
 # setup directory for external makefiles
 mkdir ./target/cargo-make
@@ -26,3 +27,6 @@ end
 [env]
 MAX_EXT_NAME = "af.path"
 MAX_PACKAGE_NAME = "af.tools"
+
+PLATFORM_INSTALL_DIR = { source = "${CARGO_MAKE_RUST_TARGET_OS}", default_value = "ERROR", mapping = {"macos" = "${HOME}/Documents/Max 9/Packages", windows = "${USERPROFILE}/Documents/Max 9/Packages" } }
+

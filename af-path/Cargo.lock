@@ -90,12 +90,12 @@ dependencies = [
 [[package]]
 name = "max-sys"
 version = "0.1.0"
-source = "git+https://github.com/Cycling74/median#8db816fa9874b851bb580475648bc82736a3e2af"
+source = "git+https://github.com/ngwese/median?rev=f5a8ad5#f5a8ad53b03b3cfda2c8b918df3b972fc8b512af"
 
 [[package]]
 name = "median"
 version = "0.1.1"
-source = "git+https://github.com/Cycling74/median#8db816fa9874b851bb580475648bc82736a3e2af"
+source = "git+https://github.com/ngwese/median?rev=f5a8ad5#f5a8ad53b03b3cfda2c8b918df3b972fc8b512af"
 dependencies = [
  "field-offset",
  "lazy_static",
@@ -111,7 +111,7 @@ dependencies = [
 [[package]]
 name = "median_macros"
 version = "0.1.0"
-source = "git+https://github.com/Cycling74/median#8db816fa9874b851bb580475648bc82736a3e2af"
+source = "git+https://github.com/ngwese/median?rev=f5a8ad5#f5a8ad53b03b3cfda2c8b918df3b972fc8b512af"
 dependencies = [
  "proc-macro2",
  "quote",

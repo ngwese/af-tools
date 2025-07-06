@@ -8,10 +8,9 @@
             "name": "Test af-path",
             "type": "lldb",
             "request": "launch",
-            // "program": "/usr/bin/lldb",
             "cargo": {
                 "args": ["test", "--no-run", "--lib", "template::tests::test_path_template_apply_with_prefix", "--", "--test-threads=1"],
-                "cwd": "${workspaceFolder}/externals-src/af-path",
+                "cwd": "${workspaceFolder}/af-path",
                 "problemMatcher": ["$rustc"]
             }
         }
