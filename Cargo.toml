@@ -13,7 +13,7 @@ anyhow = "1.0.98"
 regex = "1.11.1"
 ignore = "0.4.23"
 
-[workspace.metadata]
+[workspace.package]
 authors = [ "Greg Wuller <greg@afofo.com>" ]
 license = "MIT"
 
