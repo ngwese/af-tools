@@ -4,8 +4,8 @@ use anyhow::{Context, Result};
 use regex::Regex;
 use strfmt::strfmt;
 
-const DEFAULT_FILE_TEMPLATE: &str = r"{prefix}{stem}{suffix}.{extension}";
-const DEFAULT_SERIAL_REGEX: &str = r"(\d{3})";
+pub const DEFAULT_FILE_TEMPLATE: &str = r"{prefix}{stem}{suffix}.{extension}";
+pub const DEFAULT_SERIAL_REGEX: &str = r"(\d{3})";
 
 #[derive(Debug, Clone)]
 pub struct PathTemplate {

@@ -1,0 +1,18 @@
+{
+    "version": "0.1.0",
+    "name": "af.tools",
+    "author": "Greg Wuller",
+    "email": "ngwese@afofo.com",
+    "url": "https://github.com/ngwese/af-tools",
+    "description": "A collection of Max utilities",
+    "category": "Utility",
+    "keywords": ["utility", "af-tools"],
+    "max_version": "9.0.0",
+    "min_version": "9.0.0",
+    "os": {
+        "macintosh": {
+            "min_version": "none",
+            "platform": ["aarch64"]
+        }
+    }
+}

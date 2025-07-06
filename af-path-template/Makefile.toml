@@ -25,7 +25,7 @@ end
 '''
 
 [env]
-MAX_EXT_NAME = "af.path"
+MAX_EXT_NAME = "af.path.template"
 MAX_PACKAGE_NAME = "af.tools"
 
 PLATFORM_INSTALL_DIR = { source = "${CARGO_MAKE_RUST_TARGET_OS}", default_value = "ERROR", mapping = {"macos" = "${HOME}/Documents/Max 9/Packages", windows = "${USERPROFILE}/Documents/Max 9/Packages" } }

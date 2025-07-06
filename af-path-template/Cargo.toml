@@ -1,12 +1,12 @@
 [package]
-name = "af-path"
+name = "af-path-template"
 version = "0.1.0"
 authors = [ "Greg Wuller <greg@afofo.com>" ]
 edition = "2018"
 license = "MIT"
 
 [lib]
-name = "af_path"
+name = "af_path_template"
 crate-type = ["cdylib"]
 
 [dependencies]
