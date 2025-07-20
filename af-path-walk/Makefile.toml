@@ -7,7 +7,7 @@ load_script = '''
 
 #edit URL here
 # url_base = set https://raw.githubusercontent.com/Cycling74/median/develop/median/utils
-url_base = set https://raw.githubusercontent.com/ngwese/median/refs/heads/fix-install-init-mac/median/utils
+url_base = set https://raw.githubusercontent.com/ngwese/median/refs/heads/fix-workspace-build/median/utils
 
 # setup directory for external makefiles
 mkdir ./target/cargo-make
